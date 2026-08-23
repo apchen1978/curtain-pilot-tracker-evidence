@@ -1,0 +1,119 @@
+{
+  "artifact": "lead-004-data.json",
+  "simulation": true,
+  "disclaimer": "DEMO / SIMULATION — 虛擬客戶，非真實紀錄；未發送任何訊息；未呼叫 LINE / Make / webhook；未建立真實客戶紀錄。",
+  "lead_id": "SIM-PILOT-004",
+  "received_at": "2026-08-18T10:30:00",
+  "source": "LINE（SIMULATION）",
+  "schema_basis": "Leads 22 欄（A-V）依 build_curtain_pilot_tracker.mjs 定義；explicit-unknown（未提供）慣例依 simulate_pilot_002.mjs；nurture 與 72h 慣例依 Pilot #002；報價版本化與人工核准慣例依 Pilot #003。",
+  "score": null,
+  "score_note": "SCORE = UNKNOWN — 專案無結構化評分模型（既有 Backlog P0：Lead Score / Priority / score_updated_at 未結構化）。Pilot #001-003 的分數（86 / 15→30 / 78→70）為各模擬情境內的計算，未形成可複用規則；任何數值皆屬捏造，故不給分。",
+  "priority": "高（INFERRED — 依預算＋30 天決策時程＋明確三空間需求之定性判斷，非分數）",
+  "lead_row": {
+    "lead_id": "SIM-PILOT-004",
+    "created_at": "2026-08-18T10:30:00",
+    "source_platform": "LINE（SIMULATION）",
+    "source_page": "line-virtual-inquiry",
+    "customer_type": "自宅需求（SIMULATION）",
+    "inquiry_type": "傳照片初估（SIMULATION）",
+    "name": "陳小姐（DEMO / SIMULATION）",
+    "phone": "未提供（SIMULATION）",
+    "line_id": "SIM_LINE_PILOT004",
+    "area": "新北市新莊區（SIMULATION）",
+    "space_type": "客廳＋主臥＋次臥（SIMULATION）",
+    "need_summary": "新成屋全室窗簾：客廳需遮光但白天保留自然光；主臥高度遮光；次臥一般遮光。預算 NT$60,000–80,000；期望 30 天內完成。已提供基本需求；尚未提供窗戶尺寸、現場照片、格局圖。客戶詢問「大概多少錢？可以先估嗎？」（SIMULATION）",
+    "has_photos": "未提供（SIMULATION）",
+    "status": "new_lead",
+    "owner": "待指派（SIMULATION）",
+    "next_action": "24h 內首次聯繫；收集窗戶尺寸／照片／格局圖（SIMULATION）",
+    "next_followup_date": "2026-08-19T10:30:00",
+    "next_followup_date_note": "依 guide sheet「24h 內首次聯繫」規則由 received_at 推導；非客戶提供。",
+    "notes": "DEMO / SIMULATION。未安排丈量、未報價；草稿僅供 owner review，未發送。",
+    "intent_level": "高（SIMULATION）",
+    "intent_level_note": "INFERRED 定性判斷（預算＋時程＋具體需求），非計算分數；依 Pilot #002 慣例應於取得更多證據後更新。",
+    "days_to_followup": null,
+    "days_to_followup_note": "公式欄（=Q-INT(B)），CSV/JSON 不預先填值。",
+    "followup_health": null,
+    "followup_health_note": "公式欄（已排程／未排程），CSV/JSON 不預先填值。",
+    "record_note": "DEMO / SIMULATION | Pilot Customer #004 | 未丈量／未報價／待收集尺寸與照片"
+  },
+  "planned_followups": [
+    {
+      "sent": false,
+      "followup_date": "2026-08-18T10:45:00",
+      "lead_id": "SIM-PILOT-004",
+      "customer_name": "陳小姐（DEMO / SIMULATION）",
+      "channel": "LINE（SIMULATION）",
+      "summary": "第一次 Follow-up 草稿：回應「大概多少錢？可以先估嗎？」；說明無尺寸／照片前無法可靠估價；索取三空間窗戶寬×高、照片與格局圖；確認客廳遮光＋自然光需求。",
+      "customer_response": "未回覆（尚未發送 — SIMULATION）",
+      "next_action": "待 owner 核准草稿後發送；收集尺寸／照片／格局圖",
+      "next_followup_date": "2026-08-19T10:30:00",
+      "owner": "SIMULATION 業務"
+    },
+    {
+      "sent": false,
+      "followup_date": "2026-08-19T10:30:00",
+      "lead_id": "SIM-PILOT-004",
+      "customer_name": "陳小姐（DEMO / SIMULATION）",
+      "channel": "LINE（SIMULATION）",
+      "summary": "第二次 Follow-up 任務（如客戶未回覆）：低頻提醒補齊最小資訊清單；不承諾價格、不安排丈量。",
+      "customer_response": "未回覆（尚未發送 — SIMULATION）",
+      "next_action": "若 72h 未回覆：依 Pilot #002 慣例轉 nurture，不判定 lost",
+      "next_followup_date": "2026-08-22T10:30:00",
+      "owner": "SIMULATION 業務"
+    }
+  ],
+  "timeline": [
+    { "step": "1. 建立 Lead", "timestamp": "2026-08-18T10:30:00", "status_after": "new_lead", "lead_score": null, "priority": "待判定", "owner": "SIMULATION 系統", "action": "記錄虛擬 LINE 詢問「大概多少錢？可以先估嗎？」", "result": "需求、預算（NT$60,000–80,000）、30 天時程、三空間與遮光需求已記錄；尺寸／照片／格局缺失。", "next_action": "執行初始資格評估", "step_state": "已發生（模擬）" },
+    { "step": "2. 初始資格評估", "timestamp": "2026-08-18T10:40:00", "status_after": "new_lead", "lead_score": null, "priority": "高（INFERRED）", "owner": "SIMULATION 系統", "action": "依既有規則檢視：有預算＋時程＋明確空間需求；無尺寸／照片／格局。", "result": "SCORE = UNKNOWN（專案無評分模型）；優先級建議：高；狀態維持 new_lead（尚未聯繫）。", "next_action": "建立第一次聯繫任務（24h 內）", "step_state": "已發生（模擬）" },
+    { "step": "3. 第一次 Follow-up（草稿）", "timestamp": "2026-08-18T10:45:00", "status_after": "new_lead", "lead_score": null, "priority": "高（INFERRED）", "owner": "SIMULATION 業務", "action": "草稿已備妥（見 lead-004-simulation.md），僅供 owner review。", "result": "未發送；無任何真實訊息。", "next_action": "待 owner 核准後發送；收集尺寸／照片／格局", "step_state": "計畫中" },
+    { "step": "4. 收集補充資料", "timestamp": "2026-08-19T10:30:00", "status_after": "contacted", "lead_score": null, "priority": "高（INFERRED）", "owner": "SIMULATION 業務", "action": "索取三空間窗戶尺寸、照片、格局圖。", "result": "等待客戶回覆。", "next_action": "依回覆更新 Qualification", "step_state": "計畫中" },
+    { "step": "5. 安排丈量", "timestamp": null, "status_after": "measurement_booked", "lead_score": null, "priority": "高（INFERRED）", "owner": "SIMULATION 業務", "action": "依 Pilot #001 模式：先虛擬丈量（照片／平面圖），正式案需現場複測。", "result": "前置條件：需先取得照片或格局。", "next_action": "執行丈量", "step_state": "計畫中（需資料齊全）" },
+    { "step": "6. 初步估價", "timestamp": null, "status_after": "quoted", "lead_score": null, "priority": "高（INFERRED）", "owner": "SIMULATION 業務", "action": "以實際尺寸與布料選擇提供初步估價範圍。", "result": "前置條件：需 owner 提供定價基準（專案無價格表）。", "next_action": "產生正式報價（Quote Version Log）", "step_state": "計畫中（需定價基準）" },
+    { "step": "7. 正式報價", "timestamp": null, "status_after": "quoted", "lead_score": null, "priority": "高（INFERRED）", "owner": "SIMULATION 業務", "action": "依 Pilot #003 模式：版本化報價（Quote Version Log）；折扣／降價需人工核准。", "result": "尚未發生。", "next_action": "追蹤確認", "step_state": "計畫中" }
+  ],
+  "quote_decision": {
+    "issued": false,
+    "quote_version_log_rows": [],
+    "reasons": [
+      "無窗戶尺寸／照片／格局圖 — 無法界定數量與布料規格（Pilot #001 慣例：報價前需（虛擬）丈量）。",
+      "專案無結構化定價基準（unit price list）— 既有僅兩筆模擬報價（Pilot #001 NT$104,800 三空間四品項；Pilot #003 V1 NT$128,800 兩空間、V2 NT$104,800），彼此不一致，不足以推導單價。",
+      "Pilot #003 慣例：報價需版本化；降價／折扣需人工核准 — 現階段無任何核准。",
+      "客戶預算 NT$60,000–80,000 是客戶約束條件，不是公司報價依據。"
+    ]
+  },
+  "unknowns": [
+    "窗戶尺寸（寬×高）",
+    "現場照片",
+    "格局圖",
+    "電話號碼",
+    "決策日／入住日（30 天時程為客戶期望，非決策日）",
+    "布料／產品偏好（客廳紗簾＋遮光簾搭配為待確認假設）",
+    "客戶 LINE 完整識別（僅模擬代號 SIM_LINE_PILOT004）",
+    "owner 指派",
+    "定價基準／單價表",
+    "折扣政策"
+  ],
+  "forbidden_to_fill": [
+    "電話號碼",
+    "窗戶尺寸",
+    "照片／格局圖",
+    "決策日",
+    "產品細節與布料組合",
+    "折扣核准",
+    "任何價格承諾（含把預算當報價）",
+    "SCORE 數值"
+  ],
+  "proposed_backlog_entries": [
+    { "priority": "P1", "issue": "專案缺少結構化定價／估價基準（unit price list）；「初步估價」無法標準化，只能人工判斷。", "exposed_by": "#004", "current_impact": "無法給出有依據的初步估價；客戶問「可以先估嗎」時只能索取資料。", "minimal_next_change": "建立估價基準表（品項 × 單位價格或區間）。", "v2_now": "否；先建立定價基準。" },
+    { "priority": "P1", "issue": "decision_due_date 缺失 — #004 有 30 天時程但無欄位記錄（既有 Backlog 已列，再次被驗證）。", "exposed_by": "#004", "current_impact": "時程無法結構化追蹤。", "minimal_next_change": "Leads 增加 decision_due_date 與 decision_date_confidence。", "v2_now": "否；小欄位增補。" },
+    { "priority": "P2", "issue": "inquiry_type「傳照片初估」無法表達「要求初估但照片尚未提供」的狀態。", "exposed_by": "#004", "current_impact": "狀態語意不清，易誤導報價流程。", "minimal_next_change": "定義列舉或附註慣例。", "v2_now": "否。" },
+    { "priority": "P2", "issue": "has_photos 列舉（可／暫時無法）不涵蓋「未提供」— 呼應既有 Backlog P2 未知表示法問題。", "exposed_by": "#004", "current_impact": "空白與未知混用，AI 評分／報表失真。", "minimal_next_change": "統一未知／未提供表示法。", "v2_now": "否。" }
+  ],
+  "provenance": {
+    "created_by": "DeepSeek Harness (deepseek-v4-flash)",
+    "created_at": "2026-08-18",
+    "created_in": "C:\\Users\\grays\\Documents\\DeepSeek-Test\\portfolio-audit-1-2-readme-project\\simulation-004",
+    "based_on": "Read-Only Audit of portfolio-audit-1-2-readme-project (Codex 產物，2026-08-14)"
+  }
+}
