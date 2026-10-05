@@ -1,8 +1,8 @@
-﻿# Curtain Soft-Furnishing Pilot Tracker — Evidence
+﻿# Pilot Tracker — Evidence
 
 Rerunnable evidence for two portfolio works:
 
-- **窗簾軟裝 Pilot 追蹤器** — one tracker from lead to quote to follow-up
+- **Pilot 追蹤器** — one tracker from lead to quote to follow-up
 - **Pilot 模擬套件** — three simulation rounds (baseline / data model / quote versioning)
 
 ## Contents
@@ -13,7 +13,7 @@ Rerunnable evidence for two portfolio works:
 
 ## Verification
 
-23/23 checks pass (lead → follow-up pipeline, quote versioning, data-model fixes).
+Checks pass (lead → follow-up pipeline, quote versioning, data-model fixes).
 Rerun locally:
 
 node work/simulate_pilot_001.mjs
