@@ -1,8 +1,8 @@
 # Virtual Lead #004 — Simulation Record & Audit Trail
 
 > **DEMO / SIMULATION — 非真實客戶。** 未發送任何訊息，未呼叫 LINE / Make / webhook，未建立真實客戶紀錄。
-> 本文件由 DeepSeek Harness (deepseek-v4-flash) 於 2026-08-18 建立，位於 `portfolio-audit-1-2-readme-project\simulation-004\`。
-> 基礎：對 Codex 產物 `portfolio-audit-1-2-readme-project`（2026-08-14）的 Read-Only Audit。
+> 本文件於 2026-08-18 建立，位於 `simulation-004\`。
+> 基礎：對先前 pilot tracker 專案（2026-08-14）的 Read-Only Audit。
 
 ---
 
@@ -39,7 +39,7 @@
 - 所有紀錄標示 DEMO / SIMULATION，不寫入真實外部系統（全專案慣例）。
 
 **Q2. 哪些資料目前 UNKNOWN？**
-窗戶尺寸、現場照片、格局圖、電話、決策日／入住日、布料偏好、LINE 完整識別、owner 指派、定價基準、折扣政策。
+窗戶尺寸、現場照片、格局圖、電話、決策日／入住日、布料偏好、LINE 完整識別、負責人指派、定價基準、折扣政策。
 
 **Q3. 哪些資料禁止自行補全？**
 電話、尺寸、照片、格局、決策日、產品細節、折扣核准、任何價格承諾、SCORE 數值。**禁止把客戶預算 NT$60,000–80,000 當成公司報價。**
@@ -109,7 +109,7 @@
 | `lead-004-data.json` | 結構化資料（對齊 22 欄 Leads schema＋時間軸＋決策＋UNKNOWN＋Backlog 提案） |
 | `lead-004-leads.csv` | Leads 一列（SIMULATION） |
 | `lead-004-followups-plan.csv` | 兩筆計畫中跟進（PLANNED — NOT SENT） |
-| `simulate_pilot_004.mjs` | Portable seed script：路徑以專案根為基準（無 Codex absolute path）；需 `@oai/artifact-tool`；**未在此執行**，供 Codex 環境執行以產出 pilot-004 xlsx |
+| `simulate_pilot_004.mjs` | Portable seed script：路徑以專案根為基準（無絕對路徑）；需 `@oai/artifact-tool`；**未在此執行**，供具備該工具的環境執行以產出 pilot-004 xlsx |
 
 **未修改任何原始產物**（`outputs\` 四組 xlsx、`work\` 全部腳本與截圖原封不動）。
 
@@ -128,9 +128,9 @@
 
 ---
 
-## 7. PHASE 7 — HANDOFF TO CODEX
+## 7. PHASE 7 — HANDOFF
 
-**DeepSeek 做了什麼：** 完成 #004 的證據複習、qualification、商業判斷與 LINE 草稿；建立 `simulation-004\` 五個可稽核產物；未動任何原始檔案、未裝依賴、無外部副作用。
+**本階段做了什麼：** 完成 #004 的證據複習、qualification、商業判斷與 LINE 草稿；建立 `simulation-004\` 五個可稽核產物；未動任何原始檔案、未裝依賴、無外部副作用。
 
 **建立／修改的檔案：** 僅新增 `simulation-004\`（5 檔）；未修改任何既有檔案。
 
@@ -138,11 +138,11 @@
 
 **RECOMMENDATION（非已定案）：** priority 高（INFERRED）；intent_level 高；初步估價流程順序；四條 Backlog 新增提案（含「建立定價基準」P1）。
 
-**UNKNOWN：** 尺寸／照片／格局／電話／決策日；定價基準；折扣政策；owner 指派；LINE 發送管道實際狀態。
+**UNKNOWN：** 尺寸／照片／格局／電話／決策日；定價基準；折扣政策；負責人指派；LINE 發送管道實際狀態。
 
-**需 owner approval：** (1) 發送 Follow-up 草稿；(2) owner 指派；(3) 定價基準／估價權限；(4) 折扣政策；(5) 是否把 Backlog 提案併入正式 Backlog。
+**需決策者核准：** (1) 發送 Follow-up 草稿；(2) 負責人指派；(3) 定價基準／估價權限；(4) 折扣政策；(5) 是否把 Backlog 提案併入正式 Backlog。
 
-**Codex 下一步應檢查：**
+**下一步應檢查：**
 1. 讀 `simulation-004\lead-004-data.json`，比對 Leads 22 欄 schema 與 `lead_row` 欄位對齊（尤其 `has_photos`「未提供」超出既有列舉——對應 Backlog P2）。
 2. 在具 `@oai/artifact-tool` 的環境執行 `simulate_pilot_004.mjs`（輸入 = pilot-003 xlsx，輸出 = pilot-004 xlsx），確認無公式錯誤。
 3. 驗證 `next_followup_date`（24h 規則推導）與 Dashboard 公式計算。

@@ -1,13 +1,13 @@
 // simulate_pilot_004.mjs — Virtual Lead #004 (SIM-PILOT-004) portable simulation seed
 // ================================================================================
-// STATUS: NOT EXECUTED in DeepSeek-Test.
+// STATUS: NOT EXECUTED in this workspace.
 //   - Requires the `@oai/artifact-tool` dependency, which is NOT installed in this
 //     workspace copy (node_modules is empty, no package.json). Per task rules no
 //     packages were installed; a Markdown/JSON/CSV audit artifact was produced instead
 //     (see ../simulation-004/lead-004-simulation.md).
-//   - Run this file in an environment that has @oai/artifact-tool (e.g. the Codex
-//     sandbox where the original build_/simulate_/verify_ scripts were executed).
-// PATHS: relative to this project root (no absolute Codex paths).
+//   - Run this file in an environment that has @oai/artifact-tool (e.g. the
+//     environment where the original build_/simulate_/verify_ scripts were executed).
+// PATHS: relative to this project root (no absolute paths).
 // INPUT : outputs/curtain-soft-furnishing-pilot-tracker-pilot-003-quote-version-simulation.xlsx
 // OUTPUT: outputs/curtain-soft-furnishing-pilot-tracker-pilot-004-simulation.xlsx
 // CONVENTIONS: mirrors simulate_pilot_002/003.mjs (explicit-unknown, nurture/72h,

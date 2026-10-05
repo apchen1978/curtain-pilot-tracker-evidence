@@ -111,9 +111,9 @@
     { "priority": "P2", "issue": "has_photos 列舉（可／暫時無法）不涵蓋「未提供」— 呼應既有 Backlog P2 未知表示法問題。", "exposed_by": "#004", "current_impact": "空白與未知混用，AI 評分／報表失真。", "minimal_next_change": "統一未知／未提供表示法。", "v2_now": "否。" }
   ],
   "provenance": {
-    "created_by": "DeepSeek Harness (deepseek-v4-flash)",
+    "created_by": "Paul's Tradecraft",
     "created_at": "2026-08-18",
-    "created_in": "C:\\Users\\grays\\Documents\\DeepSeek-Test\\portfolio-audit-1-2-readme-project\\simulation-004",
-    "based_on": "Read-Only Audit of portfolio-audit-1-2-readme-project (Codex 產物，2026-08-14)"
+    "created_in": "simulation-004",
+    "based_on": "Read-only audit of the earlier pilot tracker project (2026-08-14)"
   }
 }
